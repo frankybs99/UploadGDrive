@@ -43,8 +43,11 @@ if (!empty($_POST)) {
                 'mimeType' => $mime_type
             )
         );
-
     finfo_close($finfo);
-    header('location:'.$url);exit;
+
+    echo '<script type="text/javascript">alert("File Telah Di Upload, Cek Google Drive Mu")</script>';
+    echo '<script type="text/javascript">window.location = '.$url.';</script>';
+
+
 }
 include 'index.phtml';
